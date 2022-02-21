@@ -54,11 +54,11 @@ app.get('/campgrounds/:id', async (req, res) => {
 
 })
 
-app.put('/campgrounds/:id', async (req, res) => {
-    const { id } = req.params;
-    const campground = await Campground.findByIdAndUpdate(id, { ...req.body.campground })
-    res.redirect(`/campgrounds/${campground._id}`)
-})
+// app.put('/campgrounds/:id', async (req, res) => {
+//     const { id } = req.params;
+//     const campground = await Campground.findByIdAndUpdate(id, { ...req.body.campground })
+//     res.redirect(`/campgrounds/${campground._id}`)
+// })
 
 app.delete('/campgrounds/:id', async (req, res) => {
     const { id } = req.params;
